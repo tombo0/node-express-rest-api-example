@@ -13,6 +13,36 @@ For Windows
   * Instructions here https://github.com/nodejs/node-gyp#on-windows
   * Or install using npm (`npm install --global windows-build-tools`)
 * Node-gyp (`npm install --global node-gyp`)
+* Docker (tested on 23.0.1)
+* Minikube (tested on v1.29.0)
+
+# Deployment
+
+## Build Image & Push to Registry
+
+You need to have a Dockerhub account or other registry. Then you can build docker image with this command.
+
+```
+docker build -t (docker hub username)/backend-api:latest .
+```
+
+Proceed to push docker image with this command.
+
+```
+docker push (docker hub username)/backend-api:latest
+```
+
+## Start Minikube
+
+```
+minikube start
+```
+
+## Deploy
+
+```
+kubectl apply -f deploy.yaml
+```
 
 # Usage
 
