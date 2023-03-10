@@ -1,0 +1,9 @@
+name: Test Pipeline
+run-name: test
+on: [push]
+jobs:
+  hello-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ls -la
