@@ -7,18 +7,18 @@ jobs:
   deploy-github-runner:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files
+      - name: Checkout
         uses: actions/checkout@v3
-        run: ls -la
+
+      - name: Setup Node 14
+        uses: actions/setup-node@v3
+          with:
+            node-version: '14'
 
       - name: Install Dependencies
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
         run: |
           npm install
           npm install pm2
 
       - name: Deploy
         run: pm2 start server.js
-        
