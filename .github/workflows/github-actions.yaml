@@ -17,9 +17,8 @@ jobs:
           cache: 'npm' 
 
       - name: Install Dependencies
-        run: |
-          npm install
-          npm install pm2
+        run: npm install
+        run: npm install pm2 -g
 
       - name: Deploy
         run: pm2 start server.js
