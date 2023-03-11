@@ -12,8 +12,9 @@ jobs:
 
       - name: Setup Node 14
         uses: actions/setup-node@v3
-          with:
-            cache: npm 
+        with:
+          node-version: 16
+          cache: 'npm' 
 
       - name: Install Dependencies
         run: |
