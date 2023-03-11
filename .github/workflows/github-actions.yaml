@@ -5,7 +5,7 @@ run-name: Deploy on Github Runner
 on: [push]
 jobs:
   deploy-github-runner:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -14,7 +14,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm' 
 
       - name: Install Dependencies
         run: npm install
