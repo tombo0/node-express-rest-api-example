@@ -1,9 +1,24 @@
-name: Test Pipeline
-run-name: test
+name: Github Runner CICD
+
+run-name: Deploy on Github Runner
+
 on: [push]
 jobs:
-  hello-pipeline:
+  deploy-github-runner:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: ls -la
+      - name: List Files
+        uses: actions/checkout@v3
+        run: ls -la
+
+      - name: Install Dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+        run: |
+          npm install
+          npm install pm2
+
+      - name: Deploy
+        run: pm2 start server.js
+        
