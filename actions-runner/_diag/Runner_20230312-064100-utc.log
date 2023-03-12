@@ -1,0 +1,73 @@
+[2023-03-12 06:41:00Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO HostContext] Well known config file 'Credentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO HostContext] Well known config file 'Runner': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.runner'
+[2023-03-12 06:41:00Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2023-03-12 06:41:00Z INFO Listener] RuntimeInformation: Linux 6.1.11-76060111-generic #202302091138~1675975749~22.04~f771a7f SMP PREEMPT_DYNAMIC Thu F.
+[2023-03-12 06:41:00Z INFO Listener] Version: 2.302.1
+[2023-03-12 06:41:00Z INFO Listener] Commit: b3492cb90f7a757c5a39196f956340fbbbae14d1
+[2023-03-12 06:41:00Z INFO Listener] Culture: en-US
+[2023-03-12 06:41:00Z INFO Listener] UI Culture: en-US
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO Listener] Validating directory permissions for: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO CommandLineParser] Parse
+[2023-03-12 06:41:00Z INFO CommandLineParser] Parsing 3 args
+[2023-03-12 06:41:00Z INFO CommandLineParser] parsing argument
+[2023-03-12 06:41:00Z INFO CommandLineParser] HasArgs: False
+[2023-03-12 06:41:00Z INFO CommandLineParser] Adding Command: remove
+[2023-03-12 06:41:00Z INFO CommandLineParser] parsing argument
+[2023-03-12 06:41:00Z INFO CommandLineParser] HasArgs: True
+[2023-03-12 06:41:00Z INFO CommandLineParser] arg: token
+[2023-03-12 06:41:00Z INFO CommandLineParser] parsing argument
+[2023-03-12 06:41:00Z INFO CommandLineParser] HasArgs: True
+[2023-03-12 06:41:00Z INFO CommandLineParser] Adding option 'token': '***'
+[2023-03-12 06:41:00Z INFO Listener] Arguments parsed
+[2023-03-12 06:41:00Z INFO Runner] ExecuteCommand
+[2023-03-12 06:41:00Z INFO ConfigurationStore] currentAssemblyLocation: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin/Runner.Listener.dll
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] binPath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] RootFolder: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO HostContext] Well known config file 'Runner': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.runner'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] ConfigFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.runner
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO HostContext] Well known config file 'Credentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] CredFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials_migrated'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] MigratedCredFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials_migrated
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:41:00Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:41:00Z INFO HostContext] Well known config file 'Service': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.service'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] ServiceConfigFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.service
+[2023-03-12 06:41:00Z INFO CommandSettings] Flag 'help': 'False'
+[2023-03-12 06:41:00Z INFO CommandSettings] Flag 'version': 'False'
+[2023-03-12 06:41:00Z INFO CommandSettings] Flag 'commit': 'False'
+[2023-03-12 06:41:00Z INFO CommandSettings] Flag 'check': 'False'
+[2023-03-12 06:41:00Z INFO CommandSettings] Command 'configure': 'False'
+[2023-03-12 06:41:00Z INFO CommandSettings] Command 'remove': 'True'
+[2023-03-12 06:41:00Z INFO CommandSettings] Flag 'local': 'False'
+[2023-03-12 06:41:00Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-03-12 06:41:00Z INFO ConfigurationStore] IsServiceConfigured: False
+[2023-03-12 06:41:00Z INFO ConfigurationStore] IsConfigured()
+[2023-03-12 06:41:00Z INFO ConfigurationStore] IsConfigured: False
+[2023-03-12 06:41:00Z INFO ConfigurationStore] HasCredentials()
+[2023-03-12 06:41:00Z INFO ConfigurationStore] stored False
+[2023-03-12 06:41:00Z INFO Terminal] WRITE LINE: Cannot connect to server, because config files are missing. Skipping removing runner from the server.
+[2023-03-12 06:41:00Z INFO ConfigurationStore] IsConfigured()
+[2023-03-12 06:41:00Z INFO ConfigurationStore] IsConfigured: False
+[2023-03-12 06:41:00Z INFO ConfigurationStore] HasCredentials()
+[2023-03-12 06:41:00Z INFO ConfigurationStore] stored False
+[2023-03-12 06:41:00Z INFO Terminal] WRITE LINE: Does not exist. Skipping Removing .credentials
+[2023-03-12 06:41:00Z INFO Terminal] WRITE LINE: Does not exist. Skipping Removing .runner
+[2023-03-12 06:41:00Z INFO Terminal] WRITE LINE: 
+[2023-03-12 06:41:00Z INFO Listener] Runner execution has finished with return code 0

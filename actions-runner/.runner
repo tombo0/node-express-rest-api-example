@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 24,
+  "agentName": "pop-os",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l",
+  "gitHubUrl": "https://github.com/tombo0/node-express-rest-api-example",
+  "workFolder": "_work"
+}
