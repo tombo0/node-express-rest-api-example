@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "tombo0/node-express-rest-api-example",
+  "pipelineDirectory": "node-express-rest-api-example",
+  "workspaceDirectory": "node-express-rest-api-example/node-express-rest-api-example",
+  "repositories": {
+    "tombo0/node-express-rest-api-example": {
+      "repositoryPath": "node-express-rest-api-example/node-express-rest-api-example",
+      "lastRunOn": "03/12/2023 13:46:58 +07:00"
+    }
+  },
+  "lastRunOn": "03/12/2023 13:46:58 +07:00"
+}

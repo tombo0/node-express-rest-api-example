@@ -1,0 +1,3531 @@
+[2023-03-12 06:46:57Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO HostContext] Well known config file 'Credentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO HostContext] Well known config file 'Runner': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.runner'
+[2023-03-12 06:46:57Z INFO Worker] Version: 2.302.1
+[2023-03-12 06:46:57Z INFO Worker] Commit: b3492cb90f7a757c5a39196f956340fbbbae14d1
+[2023-03-12 06:46:57Z INFO Worker] Culture: en-US
+[2023-03-12 06:46:57Z INFO Worker] UI Culture: en-US
+[2023-03-12 06:46:57Z INFO Worker] Waiting to receive the job message from the channel.
+[2023-03-12 06:46:57Z INFO ProcessChannel] Receiving message of length 27799, with hash 'baaa9724d228118ba58c84c46c7227a390dfd2adb3f5f27b760cdffb0b180a63'
+[2023-03-12 06:46:57Z INFO Worker] Message received.
+[2023-03-12 06:46:57Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/github-actions.yaml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 10,
+        "col": 15,
+        "lit": "Checkout"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "d46275a0-3444-5eb9-3c83-15ce2079b269",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 13,
+        "col": 15,
+        "lit": "Setup Node 16"
+      },
+      "contextName": "__actions_setup-node",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 16,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 11,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 25,
+              "lit": "16"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "a0b5de87-035a-5194-9887-2953543b7f5e",
+      "name": "__actions_setup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 18,
+        "col": 15,
+        "lit": "Install Dependencies"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 19,
+              "col": 14,
+              "lit": "npm install"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "29b7b471-a107-5fb6-30c3-8ca0df8eeb16",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 21,
+        "col": 15,
+        "lit": "Install pm2"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 14,
+              "lit": "npm install pm2 -g"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "5b00cdf5-74c9-5d82-874b-540241766f73",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 24,
+        "col": 15,
+        "lit": "Deploy"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 25,
+              "col": 14,
+              "lit": "pm2 start server.js"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "fde19ef7-bfd8-55fb-dfd7-c41d16d6bbcb",
+      "name": "__run_3"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.pipelineStartTime": {
+      "value": "2023-03-12 06:46:53+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "8"
+    },
+    "build.containerId": {
+      "value": "16602286"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/github-actions.yaml"
+    },
+    "system.phaseDisplayName": {
+      "value": "deploy-github-runner"
+    },
+    "system.phaseId": {
+      "value": "12366a60-e05a-59d1-a0dd-1fdf9f8e3292"
+    },
+    "system.phaseName": {
+      "value": "deploy-github-runner"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "deploy-github-runner.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "deploy-github-runner"
+    },
+    "system.jobDisplayName": {
+      "value": "deploy-github-runner"
+    },
+    "system.jobId": {
+      "value": "204d5d23-dbb7-50ec-f22f-54ad11c452c6"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://actions-results-receiver-production.githubapp.com"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 27,
+    "planId": "936ce8b0-15b7-4baa-945f-af09c33ca083",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/8",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "node-express-rest-api-example"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "tombo0"
+    }
+  },
+  "timeline": {
+    "id": "936ce8b0-15b7-4baa-945f-af09c33ca083",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "204d5d23-dbb7-50ec-f22f-54ad11c452c6",
+  "jobDisplayName": "deploy-github-runner",
+  "jobName": "__default",
+  "requestId": 8,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "49971c07-2e72-43f9-913d-5b923062e3d4",
+          "ServerName": "F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l/",
+          "FeedStreamUrl": "https://pipelines.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/936ce8b0-15b7-4baa-945f-af09c33ca083/timelines/936ce8b0-15b7-4baa-945f-af09c33ca083/records/204d5d23-dbb7-50ec-f22f-54ad11c452c6/feedstream?api-version=6.0-preview"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/pipeline"
+        },
+        {
+          "k": "sha",
+          "v": "134d865fee3f6bc7baeb97064455d6a938cd3e67"
+        },
+        {
+          "k": "repository",
+          "v": "tombo0/node-express-rest-api-example"
+        },
+        {
+          "k": "repository_owner",
+          "v": "tombo0"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "42631243"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/tombo0/node-express-rest-api-example.git"
+        },
+        {
+          "k": "run_id",
+          "v": "4396210152"
+        },
+        {
+          "k": "run_number",
+          "v": "13"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repository_id",
+          "v": "611587111"
+        },
+        {
+          "k": "actor_id",
+          "v": "42631243"
+        },
+        {
+          "k": "actor",
+          "v": "tombo0"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "tombo0"
+        },
+        {
+          "k": "workflow",
+          "v": "Github Runner CICD"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "134d865fee3f6bc7baeb97064455d6a938cd3e67"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "f1774e193e5b37ca783eef1e3c76bdd42a6c213c"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "c16bddaa61a2c7e322b0c5fe044c7cc7c56e63ae"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix cache"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:14+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "d5f4a384a8a14794eeb4d8e94962b89349211236"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/c16bddaa61a2c7e322b0c5fe044c7cc7c56e63ae"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "0d8c8a40ecab90696fea8d690ba4a8f869147443"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix cache"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:14+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "a4093fd72f405cfa5ba6261f4a3915ba2d2c6e56"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/0d8c8a40ecab90696fea8d690ba4a8f869147443"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "ebb505ff711c2e6b03206207b5df9313f03257e4"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix ignore"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:15+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "9d5b95740e620db34607e570036519c2e982d61c"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/ebb505ff711c2e6b03206207b5df9313f03257e4"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "f18439eb21d67458c9e2a487c9f0ef1f8e85880a"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix repo"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:15+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "69431e390f8e42f55a307acbb65a5273017551f5"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/f18439eb21d67458c9e2a487c9f0ef1f8e85880a"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "30bdbc9b014fde389be8f779bcabfe76c9658b9f"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix workflow"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:15+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "24817e145857b686fd066bf0108c48af9e62d500"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/30bdbc9b014fde389be8f779bcabfe76c9658b9f"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "25d15105efa4592c4c1b5a1dd7d840359c0b38dc"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix workflow"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:15+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "5a0be7dacda08973535be8fa8632153ee1a26b77"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/25d15105efa4592c4c1b5a1dd7d840359c0b38dc"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "e883c267f17b69dde63787cdb973c3f2aef70ad3"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix workflow"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:15+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "9d32ad02bcaa8f1487b0fc9c5adac0c1ec1ad40e"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/e883c267f17b69dde63787cdb973c3f2aef70ad3"
+                        }
+                      ]
+                    },
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "profesorgreen36@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Taufik Maulana"
+                              },
+                              {
+                                "k": "username",
+                                "v": "tombo0"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "134d865fee3f6bc7baeb97064455d6a938cd3e67"
+                        },
+                        {
+                          "k": "message",
+                          "v": "fix workflow"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2023-03-12T13:46:46+07:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "5a0be7dacda08973535be8fa8632153ee1a26b77"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/tombo0/node-express-rest-api-example/commit/134d865fee3f6bc7baeb97064455d6a938cd3e67"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/tombo0/node-express-rest-api-example/compare/f1774e193e5b...134d865fee3f"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "profesorgreen36@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Taufik Maulana"
+                          },
+                          {
+                            "k": "username",
+                            "v": "tombo0"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "profesorgreen36@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Taufik Maulana"
+                          },
+                          {
+                            "k": "username",
+                            "v": "tombo0"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "134d865fee3f6bc7baeb97064455d6a938cd3e67"
+                    },
+                    {
+                      "k": "message",
+                      "v": "fix workflow"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2023-03-12T13:46:46+07:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "5a0be7dacda08973535be8fa8632153ee1a26b77"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/tombo0/node-express-rest-api-example/commit/134d865fee3f6bc7baeb97064455d6a938cd3e67"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "42631243+tombo0@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "tombo0"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/pipeline"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/tombo0/node-express-rest-api-example.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1678341615.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": "A Basic Node.js/Express REST API implementation example"
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": true
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "tombo0/node-express-rest-api-example"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/tombo0/node-express-rest-api-example.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": false
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/tombo0/node-express-rest-api-example"
+                    },
+                    {
+                      "k": "id",
+                      "v": 611587111.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "node-express-rest-api-example"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOJHQUJw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/42631243?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "42631243+tombo0@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/tombo0/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/tombo0/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/tombo0/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/tombo0/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/tombo0"
+                          },
+                          {
+                            "k": "id",
+                            "v": 42631243.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "tombo0"
+                          },
+                          {
+                            "k": "name",
+                            "v": "tombo0"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjQyNjMxMjQz"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/tombo0/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/tombo0/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/tombo0/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/tombo0/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/tombo0/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/tombo0"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1678603609.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 32701.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:tombo0/node-express-rest-api-example.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/tombo0/node-express-rest-api-example"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/tombo0/node-express-rest-api-example/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2023-03-09T06:05:08Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/tombo0/node-express-rest-api-example"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/42631243?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/tombo0/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/tombo0/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/tombo0/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/tombo0/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/tombo0"
+                    },
+                    {
+                      "k": "id",
+                      "v": 42631243.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "tombo0"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjQyNjMxMjQz"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/tombo0/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/tombo0/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/tombo0/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/tombo0/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/tombo0/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/tombo0"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "pipeline"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "tombo0/node-express-rest-api-example/.github/workflows/github-actions.yaml@refs/heads/pipeline"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "134d865fee3f6bc7baeb97064455d6a938cd3e67"
+        }
+      ]
+    },
+    "run-feature-flags": {
+      "t": 2,
+      "d": [
+        {
+          "k": "actions_stream_logs_via_results_service",
+          "v": false
+        },
+        {
+          "k": "actions_use_results_service",
+          "v": true
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2023-03-12 06:46:57Z INFO JobRunner] Job ID 204d5d23-dbb7-50ec-f22f-54ad11c452c6
+[2023-03-12 06:46:57Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l/
+[2023-03-12 06:46:57Z INFO ConfigurationStore] currentAssemblyLocation: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin/Runner.Worker.dll
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO ConfigurationStore] binPath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO ConfigurationStore] RootFolder: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO HostContext] Well known config file 'Runner': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.runner'
+[2023-03-12 06:46:57Z INFO ConfigurationStore] ConfigFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.runner
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO HostContext] Well known config file 'Credentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials'
+[2023-03-12 06:46:57Z INFO ConfigurationStore] CredFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials_migrated'
+[2023-03-12 06:46:57Z INFO ConfigurationStore] MigratedCredFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials_migrated
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:57Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:57Z INFO HostContext] Well known config file 'Service': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.service'
+[2023-03-12 06:46:57Z INFO ConfigurationStore] ServiceConfigFilePath: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.service
+[2023-03-12 06:46:57Z INFO ConfigurationStore] Read setting file: 300 chars
+[2023-03-12 06:46:57Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-03-12 06:46:57Z INFO Worker] Listening for cancel message from the channel.
+[2023-03-12 06:46:57Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2023-03-12 06:46:58Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-03-12 06:46:58Z INFO JobServer] Creating websocket client ...wss://pipelines.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l/00000000-0000-0000-0000-000000000000/_apis/distributedtask/hubs/Actions/plans/936ce8b0-15b7-4baa-945f-af09c33ca083/timelines/936ce8b0-15b7-4baa-945f-af09c33ca083/records/204d5d23-dbb7-50ec-f22f-54ad11c452c6/feedstream?api-version=6.0-preview
+[2023-03-12 06:46:58Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2023-03-12 06:46:58Z INFO JobServerQueue] Initializing results client
+[2023-03-12 06:46:58Z INFO JobServerQueue] Start process web console line queue.
+[2023-03-12 06:46:58Z INFO JobServerQueue] Start process file upload queue.
+[2023-03-12 06:46:58Z INFO JobServerQueue] Start results file upload queue.
+[2023-03-12 06:46:58Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-03-12 06:46:58Z INFO JobServerQueue] Start process timeline update queue.
+[2023-03-12 06:46:58Z INFO ExecutionContext] Initialize GitHub context
+[2023-03-12 06:46:58Z INFO ExecutionContext] Initialize Env context
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:46:58Z INFO JobRunner] Starting the job execution context.
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO JobRunner] Validating directory permissions for: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Tools': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_tool'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Temp': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp'
+[2023-03-12 06:46:58Z INFO JobRunner] Getting job extension.
+[2023-03-12 06:46:58Z INFO JobRunner] Initialize job. Getting all job steps.
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known config file 'Credentials': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known config file 'SetupInfo': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.setup_info'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO PipelineDirectoryManager] Loading tracking config if exists: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_PipelineMapping/tombo0/node-express-rest-api-example/PipelineFolder.json
+[2023-03-12 06:46:58Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO JobExtension] Downloading actions
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:58Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:46:59Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:46:59Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/tarball/ac593985615ec2ede58e132d2e21d2b1cbd6127c' into /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/_temp_633e02ff-bb6a-43d4-9cb1-4b2e6f4b1e26/fa699a2d-63be-42f9-9b5a-554af3350ef3.tar.gz.
+[2023-03-12 06:46:59Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2023-03-12 06:47:00Z INFO JobServer] Successfully started websocket client.
+[2023-03-12 06:47:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e5fb14be-af7f-4ca1-b798-8ed6d33fe645', success rate: 1/1.
+[2023-03-12 06:47:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e5fb14be-af7f-4ca1-b798-8ed6d33fe645', success rate: 1/1.
+[2023-03-12 06:47:01Z INFO ActionManager] Which: 'tar'
+[2023-03-12 06:47:01Z INFO ActionManager] Location: '/usr/bin/tar'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper] Starting process:
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/_temp_633e02ff-bb6a-43d4-9cb1-4b2e6f4b1e26/fa699a2d-63be-42f9-9b5a-554af3350ef3.tar.gz"'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Working directory: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/_temp_633e02ff-bb6a-43d4-9cb1-4b2e6f4b1e26/_staging'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 35429.
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper] Process started with process id 35429, waiting for process exit.
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-03-12 06:47:01Z INFO ProcessInvokerWrapper] Finished process 35429 with exit code 0, and elapsed time 00:00:00.0161039.
+[2023-03-12 06:47:01Z INFO ActionManager] Finished getting action repository.
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:01Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:01Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/tarball/64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c' into /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/_temp_6b243a3c-7ad1-4a71-af9a-f80438b5f8f8/b285a8e2-c9f3-47ae-a6a9-7e6acd31cbdd.tar.gz.
+[2023-03-12 06:47:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e5fb14be-af7f-4ca1-b798-8ed6d33fe645', success rate: 1/1.
+[2023-03-12 06:47:02Z INFO ActionManager] Which: 'tar'
+[2023-03-12 06:47:02Z INFO ActionManager] Location: '/usr/bin/tar'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] Starting process:
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/_temp_6b243a3c-7ad1-4a71-af9a-f80438b5f8f8/b285a8e2-c9f3-47ae-a6a9-7e6acd31cbdd.tar.gz"'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Working directory: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/_temp_6b243a3c-7ad1-4a71-af9a-f80438b5f8f8/_staging'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] Updated oom_score_adj to 500 for PID: 35443.
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] Process started with process id 35443, waiting for process exit.
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] Finished process 35443 with exit code 0, and elapsed time 00:00:00.0309828.
+[2023-03-12 06:47:02Z INFO ActionManager] Finished getting action repository.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-03-12 06:47:02Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManager] Load action that reference repository from '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/actions/checkout/v3'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-03-12 06:47:02Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-03-12 06:47:02Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-03-12 06:47:02Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Ignore action property author.
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-03-12 06:47:02Z INFO ActionManager] Action node.js file: dist/setup/index.js, no more preparation.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManager] Load action that reference repository from '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/actions/setup-node/v3'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Ignore action property author.
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment by adding problem matchers and optionally downloading and adding it to the PATH.",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "node-version-file"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 12,
+          "col": 3,
+          "lit": "architecture"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 14,
+          "col": 3,
+          "lit": "check-latest"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 17,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 3,
+          "line": 23,
+          "col": 14,
+          "expr": "github.server_url == 'https://github.com' && github.token || ''"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 24,
+          "col": 3,
+          "lit": "cache"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 26,
+          "col": 3,
+          "lit": "cache-dependency-path"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/setup/index.js",
+    "pre": null,
+    "post": "dist/cache-save/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "success()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-03-12 06:47:02Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-03-12 06:47:02Z INFO ActionManager] Action node.js file: dist/setup/index.js.
+[2023-03-12 06:47:02Z INFO ActionManager] Action post node.js file: dist/cache-save/index.js.
+[2023-03-12 06:47:02Z INFO JobExtension] Adding .
+[2023-03-12 06:47:02Z INFO JobExtension] Adding .
+[2023-03-12 06:47:02Z INFO JobExtension] Adding .
+[2023-03-12 06:47:02Z INFO JobExtension] Adding .
+[2023-03-12 06:47:02Z INFO JobExtension] Adding .
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO JobExtension] Total accessible running process: 447.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "e5fb14be-af7f-4ca1-b798-8ed6d33fe645",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 4,
+  "startTime": "2023-03-12T06:46:58.9198579Z",
+  "finishTime": "2023-03-12T06:47:02.7413305Z"
+}.
+[2023-03-12 06:47:02Z INFO JobRunner] Total job steps: 5.
+[2023-03-12 06:47:02Z INFO JobRunner] Run all job steps.
+[2023-03-12 06:47:02Z INFO StepsRunner] Processing step: DisplayName='Checkout'
+[2023-03-12 06:47:02Z INFO StepsRunner] Evaluating: success()
+[2023-03-12 06:47:02Z INFO StepsRunner] Result: true
+[2023-03-12 06:47:02Z INFO StepsRunner] Starting the step.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManager] Load action that reference repository from '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/actions/checkout/v3'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-03-12 06:47:02Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-03-12 06:47:02Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-03-12 06:47:02Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-03-12 06:47:02Z INFO ExecutionContext] Reserve record order 7 to 12 for post job actions.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Temp': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp'
+[2023-03-12 06:47:02Z INFO ExecutionContext] Write event payload to /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp/_github_workflow/event.json
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Temp': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp'
+[2023-03-12 06:47:02Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "tombo0/node-express-rest-api-example"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command error
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command group
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Externals': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] Starting process:
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   File name: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals/node16/bin/node'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Arguments: '"/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/actions/checkout/v3/dist/index.js"'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Working directory: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/node-express-rest-api-example/node-express-rest-api-example'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-03-12 06:47:02Z INFO CreateStepSummaryCommand] Step Summary file (/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp/_runner_file_commands/step_summary_273d87c2-1300-43f5-891d-69e88d505f7b) is empty; skipping attachment upload
+[2023-03-12 06:47:02Z ERR  StepsRunner] Caught exception from step: System.ComponentModel.Win32Exception (2): An error occurred trying to start process '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals/node16/bin/node' with working directory '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/node-express-rest-api-example/node-express-rest-api-example'. No such file or directory
+   at System.Diagnostics.Process.ForkAndExecProcess(ProcessStartInfo startInfo, String resolvedFilename, String[] argv, String[] envp, String cwd, Boolean setCredentials, UInt32 userId, UInt32 groupId, UInt32[] groups, Int32& stdinFd, Int32& stdoutFd, Int32& stderrFd, Boolean usesTerminal, Boolean throwOnNoExec)
+   at System.Diagnostics.Process.StartCore(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at GitHub.Runner.Sdk.ProcessInvoker.ExecuteAsync(String workingDirectory, String fileName, String arguments, IDictionary`2 environment, Boolean requireExitCodeZero, Encoding outputEncoding, Boolean killProcessOnCancel, Channel`1 redirectStandardIn, Boolean inheritConsoleHandler, Boolean keepStandardInOpen, Boolean highPriorityProcess, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.ProcessInvokerWrapper.ExecuteAsync(String workingDirectory, String fileName, String arguments, IDictionary`2 environment, Boolean requireExitCodeZero, Encoding outputEncoding, Boolean killProcessOnCancel, Channel`1 redirectStandardIn, Boolean inheritConsoleHandler, Boolean keepStandardInOpen, Boolean highPriorityProcess, CancellationToken cancellationToken)
+   at GitHub.Runner.Worker.Handlers.DefaultStepHost.ExecuteAsync(IExecutionContext context, String workingDirectory, String fileName, String arguments, IDictionary`2 environment, Boolean requireExitCodeZero, Encoding outputEncoding, Boolean killProcessOnCancel, Boolean inheritConsoleHandler, String standardInInput, CancellationToken cancellationToken)
+   at GitHub.Runner.Worker.Handlers.NodeScriptActionHandler.RunAsync(ActionRunStage stage)
+   at GitHub.Runner.Worker.ActionRunner.RunAsync()
+   at GitHub.Runner.Worker.StepsRunner.RunStepAsync(IStep step, CancellationToken jobCancellationToken)
+[2023-03-12 06:47:02Z INFO StepsRunner] Step result: Failed
+[2023-03-12 06:47:02Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Main",
+  "stepId": "d46275a0-3444-5eb9-3c83-15ce2079b269",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "failed",
+  "errorMessages": [
+    "An error occurred trying to start process '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals/node16/bin/node' with working directory '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-expr"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-03-12T06:47:02.7508025Z",
+  "finishTime": "2023-03-12T06:47:02.7981178Z"
+}.
+[2023-03-12 06:47:02Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2023-03-12 06:47:02Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-03-12 06:47:02Z INFO StepsRunner] Processing step: DisplayName='Setup Node 16'
+[2023-03-12 06:47:02Z INFO StepsRunner] Evaluating: success()
+[2023-03-12 06:47:02Z INFO StepsRunner] Result: false
+[2023-03-12 06:47:02Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-03-12 06:47:02Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-03-12 06:47:02Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-03-12 06:47:02Z INFO StepsRunner] Processing step: DisplayName='Install Dependencies'
+[2023-03-12 06:47:02Z INFO StepsRunner] Evaluating: success()
+[2023-03-12 06:47:02Z INFO StepsRunner] Result: false
+[2023-03-12 06:47:02Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-03-12 06:47:02Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-03-12 06:47:02Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-03-12 06:47:02Z INFO StepsRunner] Processing step: DisplayName='Install pm2'
+[2023-03-12 06:47:02Z INFO StepsRunner] Evaluating: success()
+[2023-03-12 06:47:02Z INFO StepsRunner] Result: false
+[2023-03-12 06:47:02Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-03-12 06:47:02Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-03-12 06:47:02Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-03-12 06:47:02Z INFO StepsRunner] Processing step: DisplayName='Deploy'
+[2023-03-12 06:47:02Z INFO StepsRunner] Evaluating: success()
+[2023-03-12 06:47:02Z INFO StepsRunner] Result: false
+[2023-03-12 06:47:02Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2023-03-12 06:47:02Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2023-03-12 06:47:02Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-03-12 06:47:02Z INFO StepsRunner] Processing step: DisplayName='Post Checkout'
+[2023-03-12 06:47:02Z INFO StepsRunner] Evaluating: always()
+[2023-03-12 06:47:02Z INFO StepsRunner] Result: true
+[2023-03-12 06:47:02Z INFO StepsRunner] Starting the step.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManager] Load action that reference repository from '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/actions/checkout/v3'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Actions': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2023-03-12 06:47:02Z INFO ActionManager] Action pre node.js file: N/A.
+[2023-03-12 06:47:02Z INFO ActionManager] Action node.js file: dist/index.js.
+[2023-03-12 06:47:02Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Temp': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp'
+[2023-03-12 06:47:02Z INFO ExecutionContext] Write event payload to /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp/_github_workflow/event.json
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Work': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Temp': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp'
+[2023-03-12 06:47:02Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "tombo0/node-express-rest-api-example"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2023-03-12 06:47:02Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2023-03-12 06:47:02Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command set-env
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command set-output
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command save-state
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command add-path
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command warning
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command error
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command notice
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command debug
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command group
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2023-03-12 06:47:02Z INFO ActionCommandManager] Register action command extension for command echo
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Externals': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper] Starting process:
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   File name: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals/node16/bin/node'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Arguments: '"/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_actions/actions/checkout/v3/dist/index.js"'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Working directory: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/node-express-rest-api-example/node-express-rest-api-example'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-03-12 06:47:02Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2023-03-12 06:47:02Z INFO CreateStepSummaryCommand] Step Summary file (/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp/_runner_file_commands/step_summary_deb7d55c-9c45-4da5-9417-c02d372ee73b) is empty; skipping attachment upload
+[2023-03-12 06:47:02Z ERR  StepsRunner] Caught exception from step: System.ComponentModel.Win32Exception (2): An error occurred trying to start process '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals/node16/bin/node' with working directory '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/node-express-rest-api-example/node-express-rest-api-example'. No such file or directory
+   at System.Diagnostics.Process.ForkAndExecProcess(ProcessStartInfo startInfo, String resolvedFilename, String[] argv, String[] envp, String cwd, Boolean setCredentials, UInt32 userId, UInt32 groupId, UInt32[] groups, Int32& stdinFd, Int32& stdoutFd, Int32& stderrFd, Boolean usesTerminal, Boolean throwOnNoExec)
+   at System.Diagnostics.Process.StartCore(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at GitHub.Runner.Sdk.ProcessInvoker.ExecuteAsync(String workingDirectory, String fileName, String arguments, IDictionary`2 environment, Boolean requireExitCodeZero, Encoding outputEncoding, Boolean killProcessOnCancel, Channel`1 redirectStandardIn, Boolean inheritConsoleHandler, Boolean keepStandardInOpen, Boolean highPriorityProcess, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.ProcessInvokerWrapper.ExecuteAsync(String workingDirectory, String fileName, String arguments, IDictionary`2 environment, Boolean requireExitCodeZero, Encoding outputEncoding, Boolean killProcessOnCancel, Channel`1 redirectStandardIn, Boolean inheritConsoleHandler, Boolean keepStandardInOpen, Boolean highPriorityProcess, CancellationToken cancellationToken)
+   at GitHub.Runner.Worker.Handlers.DefaultStepHost.ExecuteAsync(IExecutionContext context, String workingDirectory, String fileName, String arguments, IDictionary`2 environment, Boolean requireExitCodeZero, Encoding outputEncoding, Boolean killProcessOnCancel, Boolean inheritConsoleHandler, String standardInInput, CancellationToken cancellationToken)
+   at GitHub.Runner.Worker.Handlers.NodeScriptActionHandler.RunAsync(ActionRunStage stage)
+   at GitHub.Runner.Worker.ActionRunner.RunAsync()
+   at GitHub.Runner.Worker.StepsRunner.RunStepAsync(IStep step, CancellationToken jobCancellationToken)
+[2023-03-12 06:47:02Z INFO StepsRunner] Step result: Failed
+[2023-03-12 06:47:02Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node16",
+  "stage": "Post",
+  "stepId": "c7017a6b-39d4-4893-9273-629991e63c7b",
+  "result": "failed",
+  "errorMessages": [
+    "An error occurred trying to start process '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/externals/node16/bin/node' with working directory '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-expr"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-03-12T06:47:02.7989502Z",
+  "finishTime": "2023-03-12T06:47:02.8024383Z"
+}.
+[2023-03-12 06:47:02Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2023-03-12 06:47:02Z INFO StepsRunner] Current state: job state = 'Failed'
+[2023-03-12 06:47:02Z INFO JobRunner] Finalize job.
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:02Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:02Z INFO JobExtension] Initialize Env context
+[2023-03-12 06:47:02Z INFO JobExtension] Initialize steps context
+[2023-03-12 06:47:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e5fb14be-af7f-4ca1-b798-8ed6d33fe645', success rate: 1/1.
+[2023-03-12 06:47:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd46275a0-3444-5eb9-3c83-15ce2079b269', success rate: 1/1.
+[2023-03-12 06:47:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'c7017a6b-39d4-4893-9273-629991e63c7b', success rate: 1/1.
+[2023-03-12 06:47:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0e69a5c0-6c54-4651-ac36-3403fc10241f', success rate: 1/1.
+[2023-03-12 06:47:02Z INFO JobExtension] Total accessible running process: 447.
+[2023-03-12 06:47:02Z INFO JobExtension] Inspecting process environment variables. PID: 11162 (kworker/u32:1-ext4-rsv-conversion)
+[2023-03-12 06:47:02Z INFO LinuxProcessExtensions] Read env from /proc/11162/environ
+[2023-03-12 06:47:02Z WARN JobExtension] Ignore exception during read process environment variables: Access to the path '/proc/11162/environ' is denied.
+[2023-03-12 06:47:02Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "0e69a5c0-6c54-4651-ac36-3403fc10241f",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2023-03-12T06:47:02.8084465Z",
+  "finishTime": "2023-03-12T06:47:02.8408821Z"
+}.
+[2023-03-12 06:47:02Z INFO JobRunner] Job result after all job steps finish: Failed
+[2023-03-12 06:47:02Z INFO JobRunner] Completing the job execution context.
+[2023-03-12 06:47:02Z INFO JobRunner] Shutting down the job server queue.
+[2023-03-12 06:47:02Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2023-03-12 06:47:03Z INFO JobServerQueue] All queue process task stopped.
+[2023-03-12 06:47:03Z INFO JobServerQueue] Web console line queue drained.
+[2023-03-12 06:47:03Z INFO JobServerQueue] Uploading 5 files in one shot.
+[2023-03-12 06:47:07Z INFO JobServerQueue] Try to upload 5 log files or attachments, success rate: 5/5.
+[2023-03-12 06:47:07Z INFO JobServerQueue] File upload queue drained.
+[2023-03-12 06:47:07Z INFO JobServerQueue] Starting results-based upload queue...
+[2023-03-12 06:47:07Z INFO JobServerQueue] Results summary upload queue drained.
+[2023-03-12 06:47:07Z INFO JobServerQueue] Timeline update queue drained.
+[2023-03-12 06:47:07Z INFO JobServerQueue] Disposing job server ...
+[2023-03-12 06:47:07Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2023-03-12 06:47:07Z INFO TempDirectoryManager] Cleaning runner temp folder: /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_work/_temp
+[2023-03-12 06:47:07Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:47:07Z INFO HostContext] Well known directory 'Root': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner'
+[2023-03-12 06:47:07Z INFO HostContext] Well known directory 'Diag': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag'
+[2023-03-12 06:47:07Z INFO HostContext] Well known config file 'Telemetry': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/_diag/.telemetry'
+[2023-03-12 06:47:07Z INFO JobRunner] Raising job completed event
+[2023-03-12 06:47:07Z INFO Worker] Job completed.
