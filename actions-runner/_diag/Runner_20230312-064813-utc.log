@@ -115,3 +115,49 @@
 [2023-03-12 06:48:17Z INFO Terminal] WRITE LINE: Current runner version: '2.302.1'
 [2023-03-12 06:48:17Z INFO Terminal] WRITE LINE: 2023-03-12 06:48:17Z: Listening for Jobs
 [2023-03-12 06:48:17Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2023-03-12 06:49:09Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/.credentials_rsaparams
+[2023-03-12 06:49:09Z INFO MessageListener] Message '2' received from session 'b510f44a-d4be-4956-9d49-8accdac6f435'.
+[2023-03-12 06:49:09Z INFO Runner] Received job message of length 23212 from service, with hash '5666ace22aff58c07ee99bab4a9bcbfef7c97c89bc995d9b0d111b158e10167e'
+[2023-03-12 06:49:09Z INFO JobDispatcher] Job request 9 for plan 78f16e1a-7b9f-496f-80ac-e5bb70e4a881 job 204d5d23-dbb7-50ec-f22f-54ad11c452c6 received.
+[2023-03-12 06:49:09Z INFO JobDispatcher] Pull OrchestrationId 78f16e1a-7b9f-496f-80ac-e5bb70e4a881.deploy-github-runner.__default from JWT claims
+[2023-03-12 06:49:09Z INFO Terminal] WRITE LINE: 2023-03-12 06:49:09Z: Running job: deploy-github-runner
+[2023-03-12 06:49:09Z INFO JobDispatcher] Start renew job request 9 for job 204d5d23-dbb7-50ec-f22f-54ad11c452c6.
+[2023-03-12 06:49:09Z INFO JobDispatcher] Successfully renew job request 9, job is valid till 3/12/2023 6:59:09 AM
+[2023-03-12 06:49:09Z INFO HostContext] Well known directory 'Bin': '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper] Starting process:
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   File name: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin/Runner.Worker'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 129 132'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Working directory: '/home/taufikmaulana/Documents/kerja/prep/Bitwyre/test/node-express-rest-api-example/actions-runner/bin'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2023-03-12 06:49:09Z INFO ProcessInvokerWrapper] Process started with process id 36329, waiting for process exit.
+[2023-03-12 06:49:09Z INFO JobDispatcher] Send job request message to worker for job 204d5d23-dbb7-50ec-f22f-54ad11c452c6.
+[2023-03-12 06:49:09Z INFO ProcessChannel] Sending message of length 23212, with hash '5666ace22aff58c07ee99bab4a9bcbfef7c97c89bc995d9b0d111b158e10167e'
+[2023-03-12 06:49:09Z INFO JobNotification] Entering JobStarted Notification
+[2023-03-12 06:49:09Z INFO JobNotification] Entering StartMonitor
+[2023-03-12 06:50:10Z INFO JobDispatcher] Successfully renew job request 9, job is valid till 3/12/2023 7:00:09 AM
+[2023-03-12 06:50:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-03-12 06:50:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2023-03-12 06:50:42Z INFO ProcessInvokerWrapper] Finished process 36329 with exit code 100, and elapsed time 00:01:32.9271141.
+[2023-03-12 06:50:42Z INFO JobDispatcher] Worker finished for job 204d5d23-dbb7-50ec-f22f-54ad11c452c6. Code: 100
+[2023-03-12 06:50:42Z INFO JobDispatcher] finish job request for job 204d5d23-dbb7-50ec-f22f-54ad11c452c6 with result: Succeeded
+[2023-03-12 06:50:42Z INFO Terminal] WRITE LINE: 2023-03-12 06:50:42Z: Job deploy-github-runner completed with result: Succeeded
+[2023-03-12 06:50:42Z INFO JobDispatcher] Stop renew job request for job 204d5d23-dbb7-50ec-f22f-54ad11c452c6.
+[2023-03-12 06:50:42Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 9.
+[2023-03-12 06:50:42Z INFO JobNotification] Entering JobCompleted Notification
+[2023-03-12 06:50:42Z INFO JobNotification] Entering EndMonitor
+[2023-03-12 06:53:27Z INFO Terminal] WRITE LINE: Exiting...
+[2023-03-12 06:53:27Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-03-12 06:53:27Z INFO ConfigurationStore] IsServiceConfigured: False
+[2023-03-12 06:53:27Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2023-03-12 06:53:27Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/F0Ed34UtTOejw8hLJsFbGr3FqJKLBKGt5O6trR7VqAIwpnHm9l/_apis/distributedtask/pools/1/messages?sessionId=b510f44a-d4be-4956-9d49-8accdac6f435&lastMessageId=2&status=Online&runnerVersion=2.302.1 has been cancelled.
+[2023-03-12 06:53:27Z INFO MessageListener] Get next message has been cancelled.
+[2023-03-12 06:53:27Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2023-03-12 06:53:27Z INFO JobDispatcher] Ensure WorkerDispather for job 204d5d23-dbb7-50ec-f22f-54ad11c452c6 run to finish, cancel any running job.
+[2023-03-12 06:53:27Z INFO JobDispatcher] Job request 204d5d23-dbb7-50ec-f22f-54ad11c452c6 processed succeed.
+[2023-03-12 06:53:28Z INFO Listener] Runner execution been cancelled.
